@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animated Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="main">
+        <div id="item0" class="animImg">
+            <img src="images/top-e@2x.webp" class="imageHeader2" alt="" >
+        </div>
+
+        <div id="item1" class="animImg">
+            <img src="images/bottom-e@2x.webp" class="imageHeader"  alt="" id="item1">
+
+        </div>
+        <div class="main-content">
+            <img src="images/huawei-p40-pro.svg" class="logocontent" alt="">
+            <h2 id="slogan">Visionary Photography</h2>
+        </div>
+    </section>
+
+    <section class="secondary">
+        
+    </section>
+
+
+   <script src="main.js"></script>
+
+   <script >
+       $(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+
+  $('.main-content').css({
+    opacity: function() {
+      var elementHeight = $(this).height();
+      return 1 - (elementHeight - scrollTop) / elementHeight;
+    }
+  });
+});
+
+   </script>
+
+</body>
+</html>
