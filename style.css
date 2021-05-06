@@ -25,7 +25,7 @@ body {
 .main {
 	display: flex;
 	flex-direction: column;
-	height: 110vh;
+	height: 100vh;
 	overflow: hidden;
 	align-items: center;
 	justify-content: center;
@@ -59,3 +59,15 @@ img {
 .imageHeader {
 	background-color: transparent;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+	.main
+	{
+		height: auto;
+	}
+	html{
+		font-size: 5px;
+	}
+  }
